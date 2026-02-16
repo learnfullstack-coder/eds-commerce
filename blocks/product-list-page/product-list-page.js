@@ -65,6 +65,7 @@ export default async function decorate(block) {
 
   // Request search based on the page type on block load
   if (config.urlpath) {
+    console.log(config,'---categoryconfig--');
     // If it's a category page...
     await search({
       phrase: '', // search all products in the category
@@ -248,14 +249,12 @@ function getFilterFromParams(filterParam) {
   filters.forEach((filter) => {
     if (filter.includes(':')) {
       const [attribute, value] = filter.split(':');
-      const commaRegex = /,(?!\s)/;
 
-      if (commaRegex.test(value)) {
-        // Handle array values like categories,
-        // but allow for commas within an array value (eg. "Catalog, Search")
+      if (value.includes(',')) {
+        // Handle array values (like categories)
         results.push({
           attribute,
-          in: value.split(commaRegex),
+          in: value.split(','),
         });
       } else if (value.includes('-')) {
         // Handle range values (like price)

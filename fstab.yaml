@@ -1,4 +1,7 @@
 mountpoints:
   /:
-    url: https://content.da.live/learnfullstack-coder/eds-commerce/
+    url: https://content.da.live/surabhisrivastava09/learning-eds/
     type: markup
+
+folders:
+  /products/: /products/default

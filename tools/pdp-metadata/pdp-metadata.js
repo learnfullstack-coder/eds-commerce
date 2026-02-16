@@ -204,7 +204,7 @@ const getProducts = async (config, pageNumber) => {
         productView: {
           ...item.productView,
           image: baseImageUrl,
-          path: `products/${urlKey}/${sku}`,
+          path: `products/${urlKey}/${sku}`.toLowerCase(),
           meta_keyword: (metaKeyword !== null) ? metaKeyword : '',
           meta_title: he.decode((metaTitle !== '') ? metaTitle : name),
           meta_description: finalDescription,

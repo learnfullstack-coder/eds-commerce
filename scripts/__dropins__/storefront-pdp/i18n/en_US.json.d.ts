@@ -19,12 +19,6 @@ declare const _default: {
       "SpecialPrice": {
         "label": "Special Price"
       },
-      "TierPrice": {
-        "label": "Tier Price"
-      },
-      "TierPricing": {
-        "label": "Buy {quantity} for {price} each and save {percent}%"
-      },
       "PriceRange": {
         "From": {
           "label": "From"
